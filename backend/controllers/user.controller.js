@@ -70,3 +70,19 @@ export const updateUserController = async (req, res) => {
         })
     }
 }
+
+export const deleteAllUsersController = async (req, res) => {
+    try {
+        await User.deleteMany();
+        return res.status(200).json({
+            success: true,
+            message: "All users deleted successfully"
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(400).json({
+            success: false,
+            message: "Error in deleting all users"
+        });
+    }
+}

@@ -1,13 +1,15 @@
 
 import './App.css'
 import Form from './components/Form'
+import Navbar from './components/Navbar'
 import UserDetails from './components/UserDetails'
 
 function App() {
 
   return (
     <>
-      <Form />
+      <Navbar />
+      {/* <Form /> */}
       <UserDetails />
     </>
   )
